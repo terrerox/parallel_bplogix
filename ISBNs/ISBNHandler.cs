@@ -16,11 +16,11 @@ public class ISBNHandler
 
             BookInfo bookInfo = new BookInfo
             {
-                Title = bookData?.title ?? "",
-                Subtitle = bookData?.subtitle ?? "",
-                Authors = string.Join(",", GetAuthorNames(bookData?.authors)) ?? "",
-                NumberOfPages = bookData?.number_of_pages ?? 0,
-                PublishDate = bookData?.publish_date ?? ""
+                Title = bookData?.title ?? "N/A",
+                Subtitle = bookData?.subtitle ?? "N/A",
+                Authors = GetAuthorNames(bookData?.authors),
+                NumberOfPages = bookData?.number_of_pages ?? "N/A",
+                PublishDate = bookData?.publish_date ?? "N/A"
             };
 
             return bookInfo;
